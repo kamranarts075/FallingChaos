@@ -41,5 +41,12 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene(0);
         }
+
+        else if (other.gameObject.CompareTag("Carrot"))
+        {
+            GameManager.Instance.PlayCarrotCollectFeedback(transform.position);
+            Destroy(other.gameObject);
+            GameManager.Instance.AddCarrotScore(1);
+        }
     }
 }
