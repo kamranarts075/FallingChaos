@@ -57,8 +57,11 @@ public class GameManager : MonoBehaviour
         spawnPos.x = Random.Range(-maxX, maxX);
         
         Instantiate(block, spawnPos, Quaternion.identity);
+    }
 
-        score++;
+    public void AddBlockScore(int amount)
+    {
+        score += amount;
         scoreText.text = score.ToString();
     }
 

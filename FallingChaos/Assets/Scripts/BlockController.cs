@@ -6,6 +6,8 @@ public class BlockController : MonoBehaviour
     {
         if (transform.position.y < -6f)
         {
+            GameManager.Instance.AddBlockScore(1);
+
             Destroy(gameObject);
         }
     }
