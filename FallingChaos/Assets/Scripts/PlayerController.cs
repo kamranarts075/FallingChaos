@@ -41,12 +41,10 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Block"))
         {
             GameManager.Instance.PlayerDeathEffectFeedback(transform.position);
-
             Destroy(gameObject);
-
             GameManager.Instance.StopTimer();
-
-            SceneManager.LoadScene(0);
+            GameManager.Instance.ShowGameOverPanel();
+            gameObject.SetActive(false);
         }
 
         else if (other.gameObject.CompareTag("Carrot"))
