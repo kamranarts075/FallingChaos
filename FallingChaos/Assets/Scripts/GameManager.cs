@@ -45,6 +45,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        gameOverPanel?.SetActive(false);
     }
 
     void Update()
